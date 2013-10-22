@@ -9,23 +9,38 @@
 
     <!-- Le styles, placed after extrastyle to correctly override default styling -->
     <link href="{% static "bootstrap/css/bootstrap.min.css" %}" rel="stylesheet"/>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
     <link href="{% static "bootstrap/css/bootstrap-responsive.min.css" %}" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="{% static "admin/css/overrides.css" %}" />
 
     <!-- <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static "admin/css/base.css" %}{% endblock %}" /> -->
-    <script type="text/javascript">window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";</script>
+    <script type="text/javascript">
+    //<![CDATA[
+        window.__admin_media_prefix__ = "{% filter escapejs %}{% static "admin/" %}{% endfilter %}";
+    //]]>
+    </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="{% static "admin/js/jquery-1.9.1.min.js" %}"><\/script>')</script>
+    <script>
+    //<![CDATA[
+        window.jQuery || document.write('<script src="{% static "admin/js/jquery-1.9.1.min.js" %}"><\/script>')
+    //]]>
+    </script>
     <script src="{% static "bootstrap/js/bootstrap.min.js" %}"></script>
 
     {% block extrahead %}{% endblock %}
 
     {% block blockbots %}<meta name="robots" content="NONE,NOARCHIVE" />{% endblock %}
     <script type="text/javascript">
-//<![CDATA[
+    //<![CDATA[
             (function($) {
                 $(document).ready(function() {
                     $('input[type="submit"]').addClass('btn');
+                    $('[title]').tooltip();
                 });
             }(jQuery));
     //]]>
@@ -61,6 +76,10 @@
                                 <li><a href="{% url 'admin:logout' %}">{% trans 'Log out' %}</a></li>
                             </ul>
                         </li>
+                        {% block languages %}
+                        <li class="divider-vertical"></li> 
+                        {% language_selector %}
+                        {% endblock languages %}
                         {% block logs %}
                         <li class="dropdown" id="recent-actions-module">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">{% trans 'Recent Actions' %} <b class="caret"></b></a>
