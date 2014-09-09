@@ -1,2 +1,2 @@
-include README.md
+include README.rst LICENSE
 recursive-include django_admin_bootstrapped *

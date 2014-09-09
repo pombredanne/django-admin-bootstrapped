@@ -1,3 +1,66 @@
+==== 2.0.0 (UNRELEASED) ====
+
+- Removal of bootstrap2 theme (Riccardo)
+- Drop support for django < 1.6 (Riccardo)
+- Django 1.7 support #117, #124 (Riccardo)
+- Remove hardcoded urls (history, delete, etc...) #121, #123 (Riccardo)
+
+==== 1.6.8 (2014-08-22) ====
+
+WARNING: bootstrap2 is deprecated, please upgrade to bootstrap3, it will be removed in the next major release
+
+- Upgrade bootstrap3 to bootstrap 3.2.0 #125 (Riccardo)
+
+==== 1.6.7 (2014-08-12) ====
+
+WARNING: bootstrap2 is deprecated, please upgrade to bootstrap3, it will be removed in the next major release
+
+- Fix fieldsets horizontal #110 (Riccardo)
+- Fix app_name not visible with django 1.7 (Peter Lauri)
+- Separate messages alert so that each message gets proper rendering #116 (Riccardo)
+- Update compatibility to django >= 1.4, django < 1.7 #119 (Peter Lauri, Riccardo)
+
+==== 1.6.6 (2014-07-23) ====
+
+WARNING: bootstrap2 is deprecated, please upgrade to bootstrap3, it will be removed in a few releases
+
+- Fix fieldsets with more than one field per row #110 (Riccardo)
+- Fix language selector (Riccardo)
+- bootstrap3 misc fixes #111 (David Rideout)
+- fix django cms template in django 1.6 #107 (Riccardo, nordbit)
+
+==== 1.6.5 (2014-05-24) ====
+
+- lot of bugfixes for the Bootstrap 3 theme (Guillaume Andreu Sabater, xwrogue3)
+- jquery scrollable fixes wrt inlines (xwrogue3)
+
+==== 1.6.4 (2014-01-16) ====
+
+- lot of bugfixes for the Bootstrap 3 theme
+
+==== 1.6.3 (2013-12-04) ====
+
+- Added jquery-migrate to better support external plugins
+- Bootstrap 3: fix display of column groups. Also uses bootstrap grid for layout of multiple fields per row
+- Error in README: updated instruction refering to where to place templates when embedding them in an app
+- Fixing actions_on_top Go button not working
+
+==== 1.6.2 (2013-11-28) ====
+
+- Boostrap 3 theme (thanks to ze-phyr-us). In order to use it, add `django_admin_bootstrapped.bootstrap3` before `django_admin_bootstrapped` into your `INSTALLED_APPS` setting.
+
+==== 1.6.1 (2013-11-16) ====
+
+- FIX #56: jquery now loaded from local installation, not the CDN
+- FIX #65: recent actions now has working urls
+
+==== 1.6.0 (2013-11-08) ====
+
+- django 1.6 compatibility
+- experimental support to Django-CMS 2.4. This is thanks to a fork of kayluhb, which has never been transformed in a PR, but still it's worth a try.
+- Python 3 compatibility (it has always been compatible, but now it's flagged appropriately as such)
+- changed version to 1.6 to reflect the 'Stable' status of the project and the compatibility with Django 1.6
+
 ==== 0.4.3 (2013-08-27) ====
 
 - display errors properly for inlines (thanks to jmagnusson)
@@ -12,7 +75,7 @@
 - tooltips for title attributes
 - generic relation lookup plugin
 - FIX: Twitter Bootstrap Responsive Navbar Broken on Small Screens (http://stackoverflow.com/questions/10185384/twitter-bootstrap-responsive-navbar-broken-on-small-screens) as reported by Fernando (https://twitter.com/fersan3)
-- FIX: login page responsive layout 
+- FIX: login page responsive layout
 - FIX #6: autocapitalization disabled in the login form (mobile friendly)
 - FIX #13: boolean fields will show the help text if provided
 - FIX #36: list filters now partially usable on a mobile fine
@@ -27,7 +90,7 @@
 
 ==== 0.3.2 (2013-02-06) ====
 
-- temporary bugfix for change_list actions 
+- temporary bugfix for change_list actions
 
 ==== 0.3.1 (2013-01-19) ====
 
